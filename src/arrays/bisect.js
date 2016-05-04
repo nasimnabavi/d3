@@ -34,3 +34,9 @@ d3.bisector = function(f) {
       ? function(d, x) { return d3_ascending(f(d), x); }
       : f);
 };
+
+d3.entries = function(map) {
+  var entries = [];
+  for (var key in map) entries.push({key: key, value: map[key]});
+  return entries;
+};
